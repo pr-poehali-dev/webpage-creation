@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import VaporwaveGrid from '../components/VaporwaveGrid';
 import FloatingObject from '../components/FloatingObject';
-import { Sun, MoonStar, Music } from 'lucide-react';
+import { Sun, MoonStar, Music, MapPin } from 'lucide-react';
 
 const Index = () => {
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
@@ -47,9 +48,10 @@ const Index = () => {
         </p>
         
         <div className="mt-12 flex flex-col md:flex-row justify-center gap-6">
-          <button className="retro-button">
-            ＥＮＴＥＲ
-          </button>
+          <Link to="/city" className="retro-button flex items-center justify-center">
+            <MapPin className="mr-2" size={18} />
+            МОЙ ГОРОД
+          </Link>
           
           <button
             className="flex items-center justify-center retro-button"
